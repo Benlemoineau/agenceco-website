@@ -1,24 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 1440px; 
+}
+
 body {
     font-family: Poppins;
+    background-color: #f4f4f4
+}
+
+.logo {
+    color:#255919;
+    font-size: 43px;
+    font-weight: bold;
+    padding: 25px;
+} 
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+nav a {
+   color: #000000;
+   font-weight: 500;
+   font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding-right: 38px;
+}
+
+.image_container {
+    position: relative;
+}
+
+.background_image {
+    width: 100%;
+    height:auto;
+    display: block;
+
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 11%;
+    left: 38.4%;
+}
+
+.première_partie, .deuxième_partie {
+    display:block;
+    line-height: 1.2;
     margin: 0;
 }
 
-.logo_Nav {
-    color:#255919;
-    font-size: 43px;
-    font-style: bold;
-    width: 230px;
-    Height: 50px;
-    margin-top: 25px;
-    margin-left:  25px;
+.première_partie {
+    font-weight: 600;
+    font-size: clamp(28px, 4vw, 51px);
+    color: white;
 }
 
-.image_accueil {
-    background-image: url('rodion-kutsaev-049M_crau5k-unsplash.jpg');
-    padding-top: 100px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 1,440px;
-    height: 802px;
-    background-position-y: top;
+.deuxième_partie {
+    font-weight: 700;
+    font-size: clamp(38px, 5vw, 64px);
+    color: #C8FF00;
+}
+
+.équipe_container {
+    text-align: center;
+}
+
+.équipe_container h2 {
+    color: #469B61;
+    font-weight: 600;
+    font-size: 53px;
+    margin-top: 3%;
+}
+
+.équipe_container p {
+    color: black;
+    font-weight: 500;
+    font-size: 29px;
+    padding-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.personne_container {
+    display:flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    gap:30px;
+}
+
+.personne {
+    flex-basis: 250px;
+    text-align: center;
+}
+
+.personne img {
+    object-fit: cover;
+    margin-bottom: 11px;
+    width: 250px;
+    height: 250px;
+}
+
+.personne h3 {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.personne p {
+    color: #868686;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.ajustement-photo {
+    width: 250px;           
+    height: 250px;          
+    border-radius: 50%;     
+    overflow: hidden;       
+    margin: 0 auto;         
+}
+
+#photo-julie {
+    transform: scale(1.2);
+    object-position: top;
+
+}
+#photo-romeo {
+    transform: scale(1.9);
+    object-position: center 29%;
+}
+
+#photo-javier {
+    transform: scale(1.4);
+    object-position: 70% -309%;
+
 }

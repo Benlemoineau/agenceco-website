@@ -12,41 +12,68 @@
 </head>
 
 <body>
-    <header>
-        <nav> 
-            <div class="logo_Nav">
-                <p id="Accueil">Agence<em>eco</em></p>
-            </div>
-            <a href="#Accueil">Accueil</a>
-            <a href="#Notre_équipe">Notre équipe</a>
-            <a href="#Nos_services">Nos services</a>
-            <a href="#Témoignages">Témoignages</a>
-            <a href="#Contactez-nous">Contactez-nous</a>
-            <a href="#Actualités">Actualités</a>
-        </nav>
-    </header>
-
-    <main>
-        <div class="image_accueil"> 
-           <h1>Bienvenue dans votre <em>agence web écologique</em></h1>
+    <nav><!-- Menu de navigation -->
+        <div id="Accueil" class="logo">
+            Agence<em>eco</em>
         </div>
-        <section><!--Notre Equipe -->
+        <ul>
+            <li><a href="#Accueil">Accueil</a></li>
+            <li><a href="#Notre_équipe">Notre équipe</a></li>
+            <li><a href="#Nos_services">Nos services</a></li>
+            <li><a href="#Témoignages">Témoignages</a></li>
+            <li><a href="#Contactez-nous">Contactez-nous</a></li>
+            <li><a href="#Actualités">Actualités</a></li>
+        </ul>
+    </nav>
+    
+    <header class="image_container"><!--Bienvenue, accueil -->
+        <img src="css\rodion-kutsaev-049M_crau5k-unsplash.jpg" alt="feuilles vertes" class="background_image">
+            <div class="overlay">
+                <span class="première_partie">Bienvenue dans votre</span>
+                <span class="deuxième_partie">agence web écologique</span>
+            </div>
+    </header>
+    
+        <section class="équipe_container"><!--Notre Equipe -->
             <h2 id="Notre_équipe">Notre équipe</h2> 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Proin quis porttitor risus. Ut id tellus sed massa fringilla euismod.
-                    Vivamus faucibus eleifend ipsum ac malesuada</p>
-                <img src="assets\image_1.jpg">
-                <img src="assets\image_2.jpg">
-                <img src="assets\image_3.jpg">
-                <h3>Julie Dupont</h3>
-                    <p>Quisque auctor porta turpis eget sollicitudin.Quisque varius urna vitae massa tempor</p>
-                <h3>Romeo Sylla</h3>
-                    <p>Quisque auctor porta turpis eget sollicitudin.Quisque varius urna vitae massa tempor</p>
-                <h3>Javier Bardem</h3>
-                    <p>Quisque auctor porta turpis eget sollicitudin.Quisque varius urna vitae massa tempor</p>
-            <p id="Témoignages">2500 clients satisfaits</p> <!-- Bannière?-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. donec sed leo in nisi vehicula
+                               bibendum.Aliquam sit amet blandit nisi, sodales molestie.</p>
+
+            <div class="personne_container">
+                <div class="personne">
+                    <div class="ajustement-photo">
+                    <img id="photo-julie" src="assets\image_1.jpg" alt="Photo de Julie Dupont">
+                    </div>
+                    <h3>Julie Dupont</h3>
+                    <p>Consectetur adipiscing elit.
+                        Donec sed leo in nisi
+                            vehicula bibendum</p>
+                </div>
+
+                <div class="personne">
+                    <div class="ajustement-photo">
+                    <img id="photo-romeo" src="assets\image_2.jpg" alt="Photo de Romeo Sylla">
+                    </div>
+                    <h3>Romeo Sylla</h3>
+                    <p>Consectetur adipiscing elit.
+                        Donec sed leo in nisi
+                            vehicula bibendum</p>
+                </div>
+
+                <div class="personne">
+                    <div class="ajustement-photo">
+                    <img id="photo-javier" src="assets\image_3.jpg" alt="Photo de Javier Bardem">
+                    </div>
+                    <h3>Javier Bardem</h3>
+                    <p>Consectetur adipiscing elit.
+                        Donec sed leo in nisi
+                            vehicula bibendum</p>
+                </div>
+            </div>
         </section>
 
+    <p id="Témoignages">2500 clients satisfaits</p> <!-- Bannière?-->
+        
         <section> <!--Nos services-->
             <h2 id="Nos_services">Nos services</h2>                
                 <img src="assets\Vector.jpg">
