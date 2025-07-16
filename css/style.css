@@ -1,14 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-    max-width: 1440px; 
 }
 
 body {
     font-family: Poppins;
-    background-color: #f4f4f4
+    background-color: #f4f6F5;
 }
 
+/* NAVIGATION */
 .logo {
     color:#255919;
     font-size: 43px;
@@ -40,6 +40,7 @@ nav ul {
     padding-right: 38px;
 }
 
+/* HEADER (accueil) */
 .image_container {
     position: relative;
 }
@@ -78,6 +79,7 @@ nav ul {
     color: #C8FF00;
 }
 
+/* NOTRE EQUIPE */
 .équipe_container {
     text-align: center;
 }
@@ -126,6 +128,7 @@ nav ul {
     color: #868686;
     font-weight: 400;
     font-size: 18px;
+    padding-bottom: 56px;
 }
 
 .ajustement-photo {
@@ -150,4 +153,322 @@ nav ul {
     transform: scale(1.4);
     object-position: 70% -309%;
 
+}
+/* BANNIERE */
+.bannière_container {
+    background-color: #183A43;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 150px;
+}
+
+.boite_externe1, .boite_externe2, .boite_interne1, .boite_interne2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    
+}
+
+.boite_externe1 {
+    margin-left: 152px;
+}
+
+.boite_externe2 {
+    margin-right: 152px;
+}
+
+.boite_interne1 {
+    margin-right: 156px;
+    margin-left: 156px;
+}
+
+.boite_interne2 {
+    margin-right: 156px;
+}
+
+.le_nombre  {
+    color: #C8FF00;
+    font-weight: 700;
+    font-size: 44px;
+
+}
+
+.les_mots {
+    color: white;
+    font-weight: 600;
+    font-size: 19px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* NOS SERVICES */
+.services_container {
+    text-align: center;
+}
+
+.services_container h2 {
+    color: #469B61;
+    font-weight: 600;
+    font-size: 53px;
+    margin-top: 36px;
+    margin-bottom: 28px;
+}
+
+.bloc_container {
+    display:flex;
+    justify-content: center;
+    gap: 184px;
+    flex-wrap: wrap;
+}
+
+.bloc {
+    width: 479px;
+    height: 448px;
+    background-color: #c2b8b8; 
+    border-radius: 30px; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 25px; 
+    position: relative;
+}
+
+.bloc p {
+    position: absolute;
+    bottom: -69px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 43px;
+    font-weight: 600;
+    color: black;
+}
+
+.bloc img {
+    margin-top: 116px;
+    width: 231px;
+    height: 213px;
+}
+
+/* ACTUALITES */
+.actualité_container {
+    text-align: center;
+}
+
+.actualité_container h2 {
+    color: #469B61;
+    font-weight: 600;
+    font-size: 53px;
+    margin-top: 100px;
+}
+
+/* CONTACTEZ-NOUS */
+.contact_container {
+    text-align: center;
+    background-color: #183A43;
+    height: 1040px;
+}
+
+.contact_container h2 {
+    color: #C8FF00;
+    font-weight: 700px;
+    font-size: 53px;
+    padding-top: 58px;
+}
+
+.contact_container p {
+    color: white;
+    font-weight: 500;
+    font-size: 27px;
+    margin-top: 20px;
+}
+
+.apropos_container {
+    display: flex;
+    flex-direction: row;
+    height: 401px;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    gap: 5%;
+}
+
+.ajustement_photo  img {
+    border-radius: 30px;
+    height: 100%;
+}
+
+.ajustement_icones { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-color: #000000;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.ajustement_icones p {
+    color: black;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.ajustement_icones span {
+    color:#868686;
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 4%;
+    margin-bottom: 5%;
+}
+
+.ajustement_carré {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10%;
+    justify-content: center;
+    gap: 30px;
+}
+
+.carré {
+    display: flex;
+    flex-direction: column;
+    border-color: #183A43;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 78px;
+    height: 144px;
+    width: 150px;
+}
+.carré p {
+    margin-top: 66px;
+    color: #183A43;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.carré img {
+    height: 60px;
+    width: 65px;
+    margin-left: 41px;
+    margin-top: 41px;
+}
+
+.notre_galerie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.notre_galerie h2 {
+    color: #469B61;
+    font-weight: 600;
+    font-size: 53px;
+}
+
+.notre_galerie p {
+    color: #000000;
+    font-weight:500;
+    font-size: 29px;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.ajustement_assetskevin img {
+    border-radius: 2%;
+    width: 1242px;
+    height: 828px;
+    margin-left: 5%;
+}
+
+.banniere_navigation {
+    background-color: #183A43;
+    width: 1656px;
+    height: 225px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+} 
+
+.banniere_navigation h3 {
+    font-weight: 500;
+    font-size: 23px;
+    color:white;
+}
+
+.banniere_navigation p {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.contenu {
+    display:flex;
+    flex-direction:column;
+    margin-top: 5%;
+    gap: 14%;
+}
+
+.contenu_2 {
+    display:flex;
+    flex-direction:column;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.contenu_2a img {
+    height: 60%;
+    margin-right: 2%;
+}
+
+.contenu_2a  {
+    display: flex;
+    color:white ;
+    height: 50%;
+    width: 109%;
+    gap: 2%;
+}
+
+.contenu_2a div {
+    padding-bottom: 2%
+}
+
+.pied_de_page {
+    height:150px;
+    display:flex;
+    flex-direction:row;
+    gap: 25%;
+    background-color:#0C2227;
+    
+}
+
+.pied_de_page p {
+    margin-top: 2%;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    margin-left: 5%;
+}
+
+
+.pied_de_page img {
+    height: 25%;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 30%;
+    border-color: white;
+    padding: 5%;
+}
+
+.pied_de_page div {
+    margin-top:2%;
+    margin-right: 10%;
+    display:flex;
+    flex-direction: row;
+    gap: 46%;
+
+    
 }
