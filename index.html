@@ -116,7 +116,43 @@
         <h2 id="Contactez-nous">Contactez-nous</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Proin quis porttitor risus.</p>
-            <!-- insertion d'un formulaire-->
+
+        <form  class="forme_formulaire" action="" method="get"> <!-- Formulaire-->
+            <div class="forme_ligne">
+                <div class="forme_groupe">
+                    <label for="nom">Nom</label>
+                    <input type="text" name="nom" id="nom">
+                </div>
+                <div class="forme_groupe">
+                    <label for="categorie">Catégorie</label>
+                    <input type="text" name="catégorie" id="categorie">
+                </div>
+            </div>
+
+            <div class="forme_ligne">
+                <div class="forme_groupe">
+                    <label for="telephone">Téléphone</label>
+                    <input type="text" name="Téléphone" id="telephone">
+                </div>
+                <div class="forme_groupe">
+                    <label for="ville">Ville</label>
+                    <input type="text" name="Ville" id="ville">
+                </div>
+            </div>
+
+            <div class="forme_groupe">
+                    <label for="email">Email</label>
+                    <input type="text" name="Email" id="email">
+            </div>
+
+            <div class="forme_groupe">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+            
+
+            <button type="submit" class="envoyer_button">Envoyer</button>
+        </form>
     </section>
 
     <section class="apropos_container"><!-- A propos de nous -->
@@ -134,7 +170,7 @@
                 </div>
                 <div class="carré">
                     <img src="assets\Vector-3.jpg" alt="Goutte d'eau avec main en dessous">
-                    <p>Responsable</p>
+                    <span>Responsable</span>
                 </div>
                 <div class="carré">
                     <img src="assets\Vector-4.jpg" alt="horloge avec 24h au centre">
@@ -146,13 +182,15 @@
 
     <section class="notre_galerie"> <!--Notre galerie-->
         <h2>Notre galerie</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. donec sed leo in nisi vehicula<br>
-            bibendum.Aliquam sit amet blandit nisi, sodales molestie.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. donec sed leo in nisi vehicula</p><br>
+            <span>bibendum.Aliquam sit amet blandit nisi, sodales molestie.</span>
         <div class="ajustement_assetskevin">
         <img src="assets\kevin-bhagat-zNRITe8NPqY-unsplash.jpg">
-        </div>      
-        <i class="fa-solid fa-less-than"></i>
-        <i class="fa-solid fa-greater-than"></i>
+        </div>
+        <div class="container_lessgreater">
+            <div class="less"><</div> 
+            <div class="greater">></div>
+        </div>
     </section>
 
     <nav> <!-- Navigation -->
@@ -193,7 +231,7 @@
     <footer>
         <div class="pied_de_page"> <!-- Pied-de-page -->
             <p>Copyright © 2021 AGENCECO - All rights reserved</p>
-            <p>Me connecter</p>
+            <span>Me connecter</span>
                 <div>
                     <img src="assets\efff690da60c32c1327fec79504ddfb7e61735a9.png" alt="icone de facebook">
                     <img src="assets\149aeda8fe17fbff063dea4d428390a0cf72f0bf.png" alt="icone de twitter">
