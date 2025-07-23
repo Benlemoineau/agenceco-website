@@ -12,231 +12,234 @@
 </head>
 
 <body>
-    <nav><!-- Menu de navigation -->
-        <div id="Accueil" class="logo">
-            Agenc<em>eco</em>
-        </div>
-        <ul>
-            <li><a href="#Accueil">Accueil</a></li>
-            <li><a href="#Notre_équipe">Notre équipe</a></li>
-            <li><a href="#Nos_services">Nos services</a></li>
-            <li><a href="#Témoignages">Témoignages</a></li>
-            <li><a href="#Contactez-nous">Contactez-nous</a></li>
-            <li><a href="#Actualités">Actualités</a></li>
-        </ul>
-    </nav>
-    
-    <header class="image_container"><!--Bienvenue, accueil -->
-        <img src="css\rodion-kutsaev-049M_crau5k-unsplash.jpg" alt="feuilles vertes" class="background_image">
-            <div class="overlay">
-                <span class="première_partie">Bienvenue dans votre</span>
-                <span class="deuxième_partie">agence web écologique</span>
-            </div>
-    </header>
-    
-        <section class="équipe_container"><!--Notre Equipe -->
-            <h2 id="Notre_équipe">Notre équipe</h2> 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. donec sed leo in nisi vehicula
-                               bibendum.Aliquam sit amet blandit nisi, sodales molestie.</p>
 
-            <div class="personne_container">
-                <div class="personne">
-                    <div class="ajustement-photo">
-                    <img id="photo-julie" src="assets\image_1.jpg" alt="Photo de Julie Dupont">
+    <header class="premiere-section"> <!-- ACCUEIL -->
+        <nav> 
+            <div id="Accueil" class="logo">Agenc<em>eco</em></div>
+
+            <ul class="navigation-barre">
+                <li><a href="#Accueil">Accueil</a></li>
+                <li><a href="#Notre_équipe">Notre équipe</a></li>
+                <li><a href="#Nos_services">Nos services</a></li>
+                <li><a href="#Témoignages">Témoignages</a></li>
+                <li><a href="#Contactez-nous">Contactez-nous</a></li>
+                <li><a href="#Actualités">Actualités</a></li>
+            </ul>
+        
+            <div class="menu-burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <!-- NAVIGATION MOBILE -->
+        <nav>
+            <ul id="navigation-mobile" class="navigation-mobile">
+                <li><a href="#Accueil">Accueil</a></li>
+                <li><a href="#Notre_équipe">Notre équipe</a></li>
+                <li><a href="#Nos_services">Nos services</a></li>
+                <li><a href="#Témoignages">Témoignages</a></li>
+                <li><a href="#Contactez-nous">Contactez-nous</a></li>
+                <li><a href="#Actualités">Actualités</a></li>
+            </ul>
+        </nav>
+
+    <div class="overlay">
+        <h1>Bienvenue dans votre <br><span class="highlight">agence web écologique</span></h1>
+    </div>
+    </header>
+    <script src="js/script.js"></script>
+      
+    <main>
+        <section id="Notre_équipe" class="équipe-section">      <!-- NOTRE EQUIPE -->
+            <h2 class="section-titre-vert">Notre équipe</h2>
+             <p class="section-soustitre">Lorem ipsum dolor sit amet, consectetur adipiscing elit. donec sed leo in nisi vehicula bibendum. Aliquam sit amet blandit nisi, sodales molestie.</p>
+            <div class="equipe-contenant">
+                <div class="equipe-membre">
+                    <div class="equipe-photo">
+                        <img src="assets/image_1.jpg" alt="Photo de Julie Dupont">
                     </div>
                     <h3>Julie Dupont</h3>
-                    <p>Consectetur adipiscing elit.
-                        Donec sed leo in nisi
-                            vehicula bibendum</p>
+                    <p>Consectetur adipiscing elit.<br>Donec sed leo in nisivehicula bibendum</p>
                 </div>
-
-                <div class="personne">
-                    <div class="ajustement-photo">
-                    <img id="photo-romeo" src="assets\image_2.jpg" alt="Photo de Romeo Sylla">
+                <div class="equipe-membre">
+                    <div class="equipe-photo">
+                        <img src="assets/image_2.jpg" alt="Photo de Romeo Sylla">
                     </div>
                     <h3>Romeo Sylla</h3>
-                    <p>Consectetur adipiscing elit.
-                        Donec sed leo in nisi
-                            vehicula bibendum</p>
+                    <p>Consectetur adipiscing elit.Donec sed leo in nisivehicula bibendum</p>
                 </div>
-
-                <div class="personne">
-                    <div class="ajustement-photo">
-                    <img id="photo-javier" src="assets\image_3.jpg" alt="Photo de Javier Bardem">
+                <div class="equipe-membre">
+                    <div class="equipe-photo">
+                        <img src="assets/image_3.jpg" alt="Photo de Javier Bardem">
                     </div>
                     <h3>Javier Bardem</h3>
-                    <p>Consectetur adipiscing elit.
-                        Donec sed leo in nisi
-                            vehicula bibendum</p>
+                    <p>Consectetur adipiscing elit.Donec sed leo in nisivehicula bibendum</p>
                 </div>
             </div>
         </section>
 
-    <section id="Témoignages" class="bannière_container"> <!-- bannière-->
-        <div class="boite_externe1">
-            <span class="le_nombre">2500</span>
-            <span class="les_mots">clients satisfaits</span>
-        </div>
-         <div class="boite_interne1">
-            <span class="le_nombre">2500</span>
-            <span class="les_mots">clients satisfaits</span>
-        </div>
-        <div class="boite_interne2">
-            <span class="le_nombre">2500</span>
-            <span class="les_mots">clients satisfaits</span>
-        </div>
-        <div class="boite_externe2">
-            <span class="le_nombre">2500</span>
-            <span class="les_mots">clients satisfaits</span>
-        </div>
-    </section>
-
-    <section class="services_container"> <!--Nos services-->
-        <h2 id="Nos_services">Nos services</h2>
-
-        <div class="bloc_container">
-
-            <div class="bloc">
-                <img src="assets\Vector.jpg" al="création de site web">
-                <p>Création de sites web</p>
+        <section id="Témoignages" class="statistiques-section"> <!-- STATISTIQUES-->
+            <div class="stats-boite">
+                <span class="stats-nombre">2500</span>
+                <span class="stats-mots">clients satisfaits</span>
             </div>
-            <div class="bloc">
-                <img src="assets\Vector-1.jpg" alt="création d'audit">
-                <p>Audit qualité</p>
+            <div class="stats-boite">
+                <span class="stats-nombre">2500</span>
+                <span class="stats-mots">clients satisfaits</span>
             </div>
-        </div>  
-    </section>
+            <div class="stats-boite">
+                <span class="stats-nombre">2500</span>
+                <span class="stats-mots">clients satisfaits</span>
+            </div>
+            <div class="stats-boite">
+                <span class="stats-nombre">2500</span>
+                <span class="stats-mots">clients satisfaits</span>
+            </div>
+        </section>
 
-    <section class="actualité_container"> <!--Dernières actualités-->
-        <h2 id="Actualités">Dernières actualités</h2>
-        <!-- formulaire ou tableaux ? -->
-    </section>
-
-    <section class="contact_container"> <!--Contactez-nous-->
-        <h2 id="Contactez-nous">Contactez-nous</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Proin quis porttitor risus.</p>
-
-        <form  class="forme_formulaire" action="" method="get"> <!-- Formulaire-->
-            <div class="forme_ligne">
-                <div class="forme_groupe">
-                    <label for="nom">Nom</label>
-                    <input type="text" name="nom" id="nom">
+        <section id="Nos_services" class="services-section"> <!-- NOS SERVICES -->
+            <h2  class="section-titre-vert">Nos services</h2>
+            <div class="services-contenant">
+                <div class="service-objet">
+                    <div class="services-bloc1">
+                        <img src="assets/Vector.jpg" alt="création de site web">
+                    </div>
+                    <h3>Création de sites web</h3>
                 </div>
-                <div class="forme_groupe">
-                    <label for="categorie">Catégorie</label>
-                    <input type="text" name="catégorie" id="categorie">
+                <div class="service-objet">
+                    <div class="services-bloc2">
+                        <img src="assets/Vector-1.jpg" alt="création d'audit">
+                    </div>
+                    <h3>Audit qualité</h3>
                 </div>
-            </div>
+            </div>  
+        </section>
 
-            <div class="forme_ligne">
-                <div class="forme_groupe">
-                    <label for="telephone">Téléphone</label>
-                    <input type="text" name="Téléphone" id="telephone">
+        <section id="Actualités" class="actualite-section"> <!-- DERNIERES ACTUALITES -->
+            <h2 class="section-titre-vert">Dernières actualités</h2>
+            <!-- JS A VENIR -->
+        </section>
+
+        <section id="Contactez-nous" class="contact-section"> <!-- CONTACTEZ-NOUS -->
+            <h2 class="section-titre-fin">Contactez-nous</h2>
+            <p class="section-soustitre-fin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. donec sed leo in.</p>
+            <form  class="contact-formulaire" action="#" method="get"> <!-- FORMULAIRE -->
+                <div class="formulaire-ligne">
+                    <div class="formulaire-groupe">
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" id="nom">
+                    </div>
+                    <div class="formulaire-groupe">
+                        <label for="categorie">Catégorie</label>
+                        <input type="text" name="catégorie" id="categorie">
+                    </div>
                 </div>
-                <div class="forme_groupe">
-                    <label for="ville">Ville</label>
-                    <input type="text" name="Ville" id="ville">
+                <div class="formulaire-ligne">
+                    <div class="formulaire-groupe">
+                        <label for="telephone">Téléphone</label>
+                        <input type="text" name="Téléphone" id="telephone">
+                    </div>
+                    <div class="formulaire-groupe">
+                        <label for="ville">Ville</label>
+                        <input type="text" name="Ville" id="ville">
+                    </div>
                 </div>
-            </div>
-
-            <div class="forme_groupe">
-                    <label for="email">Email</label>
-                    <input type="text" name="Email" id="email">
-            </div>
-
-            <div class="forme_groupe">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5"></textarea>
-            </div>
-            
-
-            <button type="submit" class="envoyer_button">Envoyer</button>
-        </form>
-    </section>
-
-    <section class="apropos_container"><!-- A propos de nous -->
-        <div class="ajustement_photo"> 
-            <img src="assets\jason-goodman-Oalh2MojUuk-unsplash.jpg" alt="Image d'une réunion d'entreprise">
-        </div>
-        <div class="ajustement_icones">
-            <p>A propos de nous</p>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. donec sed leo in adipiscing</span>
-            
-            <div class="ajustement_carré">
-                <div class="carré">
-                    <img src="assets\Vector-2.jpg" alt="réseau internet">
-                    <p>Ecologique</p>
+                <div class="formulaire-ligne">
+                    <div class="formulaire-groupe full width">
+                        <label for="email">Email</label>
+                        <input type="text" name="Email" id="email">
+                    </div>
                 </div>
-                <div class="carré">
-                    <img src="assets\Vector-3.jpg" alt="Goutte d'eau avec main en dessous">
-                    <span>Responsable</span>
+                <div class="formulaire-ligne">
+                    <div class="formulaire-groupe full width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="3"></textarea>
+                    </div>
                 </div>
-                <div class="carré">
-                    <img src="assets\Vector-4.jpg" alt="horloge avec 24h au centre">
-                    <p>24/7 Assistance</p>
+                <div class="formulaire-boutton">
+                    <button type="submit" class="submit-boutton">Envoyer</button>
                 </div>
-            </div>   
-        </div>
-    </section>
+            </form>
+        </section>
 
-    <section class="notre_galerie"> <!--Notre galerie-->
-        <h2>Notre galerie</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. donec sed leo in nisi vehicula</p><br>
-            <span>bibendum.Aliquam sit amet blandit nisi, sodales molestie.</span>
-        <div class="ajustement_assetskevin">
-        <img src="assets\kevin-bhagat-zNRITe8NPqY-unsplash.jpg">
-        </div>
-        <div class="container_lessgreater">
-            <div class="less"><</div> 
-            <div class="greater">></div>
-        </div>
-    </section>
+        <section class="apropos-section"> <!-- A PROPOS DE NOUS -->
+            <div class="apropos-image-contenant"> 
+                <img src="assets/jason-goodman-Oalh2MojUuk-unsplash.jpg" alt="Image d'une réunion d'entreprise">
+            </div>
+            <div class="apropos-contenu-contenant">
+                <h3 class="apropos-titre">A propos de nous</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. donec sed leo in adipiscing</p>
+                <div class="qualites-contenant">
+                    <div class="qualite-objet">
+                        <img src="assets/Vector-2.jpg" alt="Icône planète/internet">
+                        <span>Ecologique</span>
+                    </div>
+                    <div class="qualite-objet">
+                        <img src="assets/Vector-3.jpg" alt="Icône goutte d'eau avec main en dessous">
+                        <span>Responsable</span>
+                    </div>
+                    <div class="qualite-objet">
+                        <img src="assets/Vector-4.jpg" alt="Icône horloge avec 24h au centre">
+                        <span>24/7 Assistance</span>
+                    </div>
+                </div>   
+            </div>
+        </section>
 
-    <nav> <!-- Navigation -->
-        <div class="banniere_navigation">
-            <div class="contenu">
-                <h3>Content</h3>
-                    <p>consectetur<br> adipiscing</p>
-            </div>
-            <div class="contenu">
-                <h3>Informations</h3>           
-                    <p>consectetur<br>adipiscing</p>
-            </div>
-            <div class="contenu">
-                <h3>Services</h3>
-                    <p>consectetur<br>adipiscing</p>
-            </div>
-            <div class="contenu">
-                <h3>Aide</h3>
-                    <p>consectetur<br> adipiscing</p>
-            </div>
-            <div class="contenu_2">
-                <div class="contenu_2a">
-                    <img src="assets/d600a05f74049a313292d9879b41c31ea8637585.png" alt="icone de telephone">
-                        <div>
-                            <p>+33 00 00 00 00 00<br>+33 00 00 00 00 00</p>
-                        </div>
-                </div>
-                <div class="contenu_2a">
-                    <img src="assets\dec2694b7b05dbbf5de0efe70c93f87e6ceab7a0.png" alt="icone de localisation">
-                        <div>
-                        <p>75001 Paris<br>France</p>
-                        </div>     
+        <section class="notregalerie-section"> <!-- NOTRE GALERIE -->
+            <h2 class="section-titre-vert">Notre galerie</h2>
+            <p class="section-soustitre">Lorem ipsum dolor sit amet, consectetur adipiscing elit. donec sed leo in nisi vehicula bibendum.Aliquam sit amet blandit nisi, sodales molestie.</p>
+            <div class="galerie-contenant">
+                <img src="assets/kevin-bhagat-zNRITe8NPqY-unsplash.jpg" alt="Un espace de travail moderne avec un ordinateur et une plante">
+                <div class="galerie-navigation">
+                    <button class="galerie-fleche ">&lt;</button>
+                    <button class="galerie-flechesuivante">></button>
                 </div>
             </div>
-        </div>        
-    </nav>
+        </section>
+    </main>
 
     <footer>
-        <div class="pied_de_page"> <!-- Pied-de-page -->
-            <p>Copyright © 2021 AGENCECO - All rights reserved</p>
-            <span>Me connecter</span>
-                <div>
-                    <img src="assets\efff690da60c32c1327fec79504ddfb7e61735a9.png" alt="icone de facebook">
-                    <img src="assets\149aeda8fe17fbff063dea4d428390a0cf72f0bf.png" alt="icone de twitter">
-                    <img src="assets\da7742d461170ec86b79441f50aabb0e0851632a.png" alt="icone d'instagram">
+        <div class="footer-contenu">
+            <div class="footer-column">
+                <h2>Content</h2>
+                <p>consectetur<br>adipiscing</p>
+            </div>
+            <div class="footer-column">
+                <h2>Informations</h2>           
+                <p>consectetur<br>adipiscing</p>
+            </div>
+            <div class="footer-column">
+                <h2>Services</h2>
+                <p>consectetur<br>adipiscing</p>
+            </div>
+            <div class="footer-column">
+                <h2>Aide</h2>
+                <p>consectetur<br> adipiscing</p>
+            </div>
+            <div class="footer-contact">
+                <div class="contact-objet">
+                    <img src="assets/d600a05f74049a313292d9879b41c31ea8637585.png" alt="Icône de telephone">
+                    <p>+33 00 00 00 00 00<br>+33 00 00 00 00 00</p>
                 </div>
+                <div class="contact-objet">
+                    <img src="assets/dec2694b7b05dbbf5de0efe70c93f87e6ceab7a0.png" alt="Icône de localisation">
+                    <p>75001 Paris<br>France</p>
+                </div>     
+            </div>
+        </div>
+        <div class="footer-contenudubas"> <!-- PIED-DE-PAGE -->
+            <p>Copyright © 2021 AGENCECO - All rights reserved</p>
+            <a href="#" class="login-boutton">Me connecter</a>
+            <div class="footer-reseauxsociaux">
+                <div class="footer-iconereseau">
+                    <img  src="assets/efff690da60c32c1327fec79504ddfb7e61735a9.png" alt="icone de facebook">
+                    <img src="assets/149aeda8fe17fbff063dea4d428390a0cf72f0bf.png" alt="icone de twitter">
+                    <img src="assets/da7742d461170ec86b79441f50aabb0e0851632a.png" alt="icone d'instagram">
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 
