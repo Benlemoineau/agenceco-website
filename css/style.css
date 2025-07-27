@@ -12,10 +12,10 @@ body {
     overflow-x: hidden;
 }
 
-/* -- Styles de base pour les titres et sous-titres -- */
+/* -- STYLES DE BASES SOUS TITRES & TITRES -- */
 .section-titre-vert {
     color: #469B61;
-    font-size: clamp(2.5rem, 5vw, 5.2rem); /* Police responsive */
+    font-size: clamp(2.5rem, 5vw, 5.2rem); 
     font-weight: 600;
     text-align: center;
     margin-bottom: 1rem;
@@ -55,28 +55,33 @@ main > section {
 
 /* HEADER & NAVIGATION */
 
-.premiere-section {
-    height: 100vh;
-    background: url('../assets/rodion-kutsaev-049M_crau5k-unsplash.jpg') no-repeat center center/cover;
+ header {
+    background-color: #f4f6F5;
+    padding: 1.5rem 8%;
     display: flex;
-    flex-direction: column;
-}
-
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+ }
+ 
 .logo {
     color: #255219;
-    font-size: 5rem;
+    font-size: clamp(2.5rem, 5vw, 5.2rem);
     font-weight: 500;
-    max-width: 400px;
 } 
 
 .logo em {
     font-style: italic;
-    font-weight: 500;
-    font-size: 5rem;
 }
 
 a {
     text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    gap: 30px;
 }
 
 nav {
@@ -87,21 +92,10 @@ nav {
     padding: 1.5rem 8%;
 }
 
-nav a {
-    color:#000000;
-    font-weight:600;
-    font-size: 1.3rem;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 2.5rem;
-}
-
 .overlay {
-    flex-grow: 1;
+    height: 100vh;
+    background: url('../assets/rodion-kutsaev-049M_crau5k-unsplash.jpg') no-repeat center center/cover;
+    display: flex;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -507,67 +501,105 @@ footer {
     display:none;
 }
 
-.navigation-mobile {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#menu-barre {
+    display: block;
+}
+.menu-barre {
+    display: flex;
     list-style: none;
-    border: none;
+    gap: 2.5rem;
 }
 
-/* MEDIA-QUERIES */
-@media (max-width: 1650px) {
-    
+.menu-barre a {
+    color:#000000;
+    font-weight:600;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+.menu-barre ul {
+    text-decoration: none;
+}
 
-    .navigation-barre {
-        gap: 2rem;
-    }
+
+/* MEDIA-QUERIES */
+
+@media (max-width: 1840px) {
     
-    .navigation-barre a {
+    nav {
+        gap: 50px;
+    }
+
+    .menu-barre a {
+        font-size: 1.3rem;
+
+    } 
+}
+
+@media (max-width: 1400px) {
+    .menu-barre {
+        gap: 1.5rem;
+    }
+    .menu-barre a {
         font-size: 1rem;
     }
-
-    .logo, .logo em {
-        font-size: 2rem;
+    .logo {
+        font-size: 2.2rem;
     }
+}
+@media (max-width: 1700px) {
 
+    .menu-barre {
+        gap: 2rem;
+    }
+}
+
+@media (max-width : 1630px) {
+    .menu-barre a {
+        font-size: 1.1rem;
+    }
+   
+}
+@media (max-width : 1110px) {
+
+    .menu-barre a {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 1024px) {
-    .apropos-section {
-        display:flex;
-        flex-direction:column;
-    }
+
+header { 
+    flex-wrap: wrap;
 }
 
-@media (max-width: 880px) {
-     .navigation-barre {
-        gap: 1rem;
+.logo {
+        order: 1;
     }
-    
-    .navigation-barre a {
-        font-size: 0.8rem;
+    #menu-barre {
+        order: 3; /* Le menu passera sous la première ligne */
+    }
+    .menu-burger {
+        order: 2; /* Le burger est maintenant le 2ème et dernier élément de la ligne du haut */
+    }
+    #menu-barre {
+        display: none;
+        width: 100%; /* Prend toute la largeur pour être centré en dessous */
+        margin-top: 1.5rem; /* Espace sous le logo/burger */
     }
 
-    .logo, .logo em {
-        font-size: 1.5rem;
+    /* Le menu de bureau APPARAÎT s'il a la classe 'is-open' */
+    #menu-barre.is-open {
+        display: block;
     }
-}
 
-@media (max-width: 768px) {
+    /* Les liens deviennent une colonne */
+    .menu-barre {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
     main > section {
         padding: 3rem 5%;
-    }
-
-    .premiere-section {
-        height: 100vh;
-        flex-wrap: wrap;
-    }
-
-    .navigation-barre {
-        display: none;
     }
 
     .menu-burger {
@@ -588,15 +620,20 @@ footer {
         border-radius: 5px;
     }
 
-    .navigation-mobile {
+    .navigation-mobile:not(.is-open) {
         display: none;
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
     }
-
+    
+    .apropos-section {
+        display:flex;
+        flex-direction:column;
+    }
+    .logo {
+        padding-left: 10px;
+    }
+    .logo, .logo em {
+        font-size: 1.5rem;
+    }
     .formulaire-ligne {
         flex-direction: column;
         margin-bottom: 0;
@@ -626,6 +663,23 @@ footer {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 570px) {
     .apropos-contenu-contenant {
         padding: 2rem 1.5rem; 
@@ -636,6 +690,13 @@ footer {
         flex-direction: column;
     }
 }
+
+
+
+
+
+
+
 
 @media (max-width: 520px) {
     .services-bloc1, .services-bloc2 {
