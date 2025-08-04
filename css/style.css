@@ -57,7 +57,7 @@ main > section {
 
  header {
     background-color: #f4f6F5;
-    padding: 1.5rem 8%;
+    padding: 0rem 3%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,7 +89,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 8%;
+    
 }
 
 .overlay {
@@ -388,36 +388,98 @@ nav {
     position: relative;
 }
 
+
 .galerie-contenant img {
     width: 100%;
     border-radius: 20px;
 }
 
-.galerie-navigation {
-    display: flex;
-    justify-content: space-between;
+.galerie-diapositive {
+    display: none;
 }
 
+.galerie-diapositive:first-child {
+    display: block;
+}
+
+.galerie-nombre {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
 .galerie-fleche {
-    width: 50px;
-    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    width: 2.8rem;
+    top: 96.5%;
+    height: 45px;
     border-radius: 50%;
     border: 1px solid #000;
     background-color: var(--bg-light);
     font-size: 1.5rem;
+    user-select: none;
+    transition: 0.6s ease;
+    color:#255919;
 }
 
 .galerie-flechesuivante {
-    width: 50px;
-    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    width: 2.8rem;
+    top: 96.5%;
+    right: 0;
+    height: 45px;
     border-radius: 50%;
     border: 1px solid #000;
     background-color: black;
     font-size: 1.5rem;
     background-color: #000;
     color:#C8FF00;
+    user-select: none;
+    transition: 0.6s ease;
 }
 
+.galerie-fleche,a {
+    padding-left:1.5%;
+    padding-top: 0.3%;
+
+}
+
+.galerie-fleche:hover, .galerie-flechesuivante:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
 /* FOOTER */
 footer {
@@ -514,6 +576,7 @@ footer {
     color:#000000;
     font-weight:600;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
+    white-space: nowrap;
 }
 .menu-barre ul {
     text-decoration: none;
@@ -558,6 +621,7 @@ footer {
     }
    
 }
+
 @media (max-width : 1110px) {
 
     .menu-barre a {
@@ -581,14 +645,19 @@ header {
         order: 2; /* Le burger est maintenant le 2ème et dernier élément de la ligne du haut */
     }
     #menu-barre {
-        display: none;
+        order: 3;
         width: 100%; /* Prend toute la largeur pour être centré en dessous */
         margin-top: 1.5rem; /* Espace sous le logo/burger */
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
     }
 
     /* Le menu de bureau APPARAÎT s'il a la classe 'is-open' */
     #menu-barre.is-open {
-        display: block;
+        max-height: 350px;
+        opacity: 1;
     }
 
     /* Les liens deviennent une colonne */
@@ -596,6 +665,8 @@ header {
         flex-direction: column;
         gap: 1.5rem;
         align-items: center;
+        text-align: center;
+        padding-bottom: 2rem;
     }
 
     main > section {
@@ -663,23 +734,6 @@ header {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 570px) {
     .apropos-contenu-contenant {
         padding: 2rem 1.5rem; 
@@ -690,13 +744,6 @@ header {
         flex-direction: column;
     }
 }
-
-
-
-
-
-
-
 
 @media (max-width: 520px) {
     .services-bloc1, .services-bloc2 {
