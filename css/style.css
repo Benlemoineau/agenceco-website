@@ -15,7 +15,7 @@ body {
 /* -- STYLES DE BASES SOUS TITRES & TITRES -- */
 .section-titre-vert {
     color: #469B61;
-    font-size: clamp(2.5rem, 5vw, 5.2rem); 
+    font-size: clamp(2rem, 3.2vw, 5.2rem); 
     font-weight: 600;
     text-align: center;
     margin-bottom: 1rem;
@@ -67,8 +67,8 @@ main > section {
  
 .logo {
     color: #255219;
-    font-size: clamp(2.5rem, 5vw, 5.2rem);
-    font-weight: 500;
+    font-size: clamp(2.5rem, 2.8vw, 5.2rem);
+    font-weight: 600;
 } 
 
 .logo em {
@@ -582,6 +582,103 @@ footer {
     text-decoration: none;
 }
 
+/* PAGE BLOG */
+
+.boutton-actualité {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    height:130px;
+}
+
+.boutton-actualité-forme {
+    border:none;
+    background-color:#C8FF00;
+    padding-top: 0.8%;
+    color:black;
+    font-size: clamp(0.6rem, 1.7vw, 2rem);
+    font-weight: 400;
+    width: 20%;
+    height: 70px;
+    border-radius:10px;
+}
+
+.contenant-actualite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.contenant-actualité-bloc {
+    color: white;
+    background-color:#469B61;
+    border-radius: 10px;
+    width: 80%;
+}
+
+
+.contenant-titre {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    margin: 0.9rem;
+}
+
+.contenant-description {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    
+}
+.contenant-description p {
+    display: flex;
+    gap:1rem;
+    padding-top: 2rem;
+}
+
+.contenant-boutton-date p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin: 0.9rem;
+}
+.contenant-boutton-date {
+    display:flex;
+    justify-content:space-between;
+    margin-right: 0.9rem;
+    padding-top: 4.5%;
+}
+.contenant-boutton {
+    display:flex;
+    justify-content: right;
+    width:30%;
+    height:50px;
+    gap:1rem;
+}
+.boutton-orange {
+    color:white;
+    background-color:orange;
+    font-size: clamp(0.3rem, 1.3vw, 2rem);
+    font-weight: 700;
+    border:none;
+    border-radius: 5px;
+    height: 70%;
+    width: 30%;
+}
+
+.boutton-rouge {
+    color:white;
+    background-color:red;
+    font-size: clamp(0.3rem, 1.3vw, 2rem);
+    font-weight: 700;
+    border:none;
+    border-radius: 5px;
+    height: 70%;
+    width: 35%;
+}
+
+
+
 
 /* MEDIA-QUERIES */
 
@@ -607,6 +704,10 @@ footer {
     .logo {
         font-size: 2.2rem;
     }
+    .boutton-actualité-forme {
+        padding-top: 1.7%;
+    }
+  
 }
 @media (max-width: 1700px) {
 
@@ -619,10 +720,16 @@ footer {
     .menu-barre a {
         font-size: 1.1rem;
     }
+
+  
    
 }
 
 @media (max-width : 1110px) {
+
+    .boutton-orange {
+        padding-top: 2%;
+    }
 
     .menu-barre a {
         font-size: 1rem;
@@ -639,28 +746,28 @@ header {
         order: 1;
     }
     #menu-barre {
-        order: 3; /* Le menu passera sous la première ligne */
+        order: 3; 
     }
     .menu-burger {
-        order: 2; /* Le burger est maintenant le 2ème et dernier élément de la ligne du haut */
+        order: 2; 
     }
     #menu-barre {
         order: 3;
-        width: 100%; /* Prend toute la largeur pour être centré en dessous */
-        margin-top: 1.5rem; /* Espace sous le logo/burger */
+        width: 100%; 
+        margin-top: 1.5rem; 
         max-height: 0;
         opacity: 0;
         overflow: hidden;
         transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
     }
 
-    /* Le menu de bureau APPARAÎT s'il a la classe 'is-open' */
+
     #menu-barre.is-open {
         max-height: 350px;
         opacity: 1;
     }
 
-    /* Les liens deviennent une colonne */
+    
     .menu-barre {
         flex-direction: column;
         gap: 1.5rem;
@@ -732,9 +839,31 @@ header {
     .footer-reseauxsociaux {
         flex-direction: column;
     }
+    .boutton-actualité-forme {
+        height: 50px;
+        padding-top: 1.4%;
+
+    }
+        
+}
+@media (max-width: 800px) {
+    .boutton-orange {
+        padding-top:2%;
+    }
+    .boutton-rouge {
+        padding-top:2%;
+    }
 }
 
 @media (max-width: 570px) {
+
+    .boutton-orange {
+        padding-top:12%;
+    }
+    .boutton-rouge {
+        padding-top:12%;
+    }
+}
     .apropos-contenu-contenant {
         padding: 2rem 1.5rem; 
     }
