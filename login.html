@@ -35,11 +35,51 @@
 
 
     <main>
-        <h2 class="section-titre-vert">Connexion</h1>
-            
+        <h2 class="section-titre-vert">Connexion</h2>
+        
+        <div class="boutton-actualité">
+        <button id="add-news-button" type="button" class="boutton-actualité-forme" style="display:none;">Ajouter une actualité</button>
+        </div>
+        <div class="contenant-actualite">
+        </div>
+        <section id="login-section" class="login-contenant">
+                <form id="login-form">
+                    <div class="form-groupe">
+                        <input type="text" id="email2" placeholder="E-mail" required>
+                    </div>
+                    <div class="forme-group">
+                        <input type="text" id="mdp" placeholder="Mot de passe" required>
+                    </div>
+                    <div class="boutton-conteneur">
+                        <button type="submit" class="login-boutton">Me connecter</button>
+                    </div>
+                </form>
+            <button id="logout-button" class="boutton-rouge" style="display:none;">Se déconnecter</button>
+        </section>
 
-
+            <div id="news-modal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                        <h3 id="modal-title">Ajouter une actualité</h3>
+                        <form id="news-form">
+                        <input type="hidden" id="news-id">
             
+                    <div class="form-group">
+                        <input type="text" id="news-title" placeholder="Titre du contenu" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="news-description" placeholder="Sa description" required>
+                    <textarea id="news-content" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="news-contenu" placeholder="Son contenu" required>
+                </div>
+            <button type="submit" class="boutton-actualité-forme">Sauvegarder</button>
+            </form>
+            </div>
+            </div>
     </main>
 
 
