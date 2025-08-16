@@ -93,6 +93,45 @@ nav {
     
 }
 
+.overlay-titre-img {
+    width: 100%; /* Il prend toute la largeur disponible */
+    aspect-ratio: 16 / 9; /* Le ratio magique ! */
+
+    /* Ces lignes sont importantes pour la superposition */
+    position: relative;
+    overflow: hidden;
+}
+.overlay-titre-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit le conteneur sans se déformer */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.overlay-titre-img h1 {
+    color: #f4f6F5;
+    font-size: clamp(0.8rem, 3.7vw, 5.9rem);
+    font-weight: 500;
+    line-height: 1.2;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    position:absolute;
+    width:90%;
+    top: 78.5%;
+    left: 73.1%;
+    z-index: 1; /* Assure que le texte est bien au-dessus */
+}
+
+.overlay-titre-img span {
+    font-size: clamp(2.8rem, 4.5vw, 7.5rem);
+    position: absolute;
+    top: 106%;
+    left: 11.4%;
+    font-weight: 700;
+    color: #C8FF00;
+}
+/*
 .overlay {
     height: 100vh;
     background: url('../assets/rodion-kutsaev-049M_crau5k-unsplash.jpg') no-repeat center center/cover;
@@ -764,6 +803,16 @@ footer {
 
 @media (max-width: 1024px) {
 
+    .overlay-titre-img h1 {
+        top:40.7%;
+        left: 50.8%;
+        font-size: clamp(0.8rem, 6.7vw, 5.9rem);
+    }
+    .overlay-titre-img span {
+        top: 110%;
+        left: 0%;
+        font-size: clamp(1.5rem, 7.3vw, 7.5rem);
+    }
 header { 
     flex-wrap: wrap;
 }
