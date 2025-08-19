@@ -50,7 +50,7 @@ body {
 }
 
 main > section {
-    padding: 4rem 21.8%;
+   /* padding: 4rem 21.8%;*/
     padding-bottom: 12%;
 }
 
@@ -561,12 +561,12 @@ footer {
     gap: 1.5rem;
 }
 
-#auth-links, .login-boutton {
+#auth-links, .login-boutton, .boutton-maj {
     background-color: #C8FF00;
     color: black;
     padding: 0.4rem 0.8rem;
     border: none;
-    border-radius: 10.1px;
+    border-radius: 30px;
     font-weight: 600;
     font-size: 1rem;
 }
@@ -632,6 +632,7 @@ footer {
     border-radius:10px;
 }
 
+/*
 .contenant-actualite {
     display: flex;
     flex-direction: column;
@@ -690,16 +691,154 @@ footer {
     width:30%;
     height:50px;
     gap:1rem;
+}*/
+
+/* ============================================== */
+/* == MISE EN PAGE DES CARTES D'ARTICLE == */
+/* ============================================== */
+/* --- Style SPÉCIFIQUE pour la page d'accueil (index.html) --- */
+#page-accueil .contenant-actualite {
+    max-width: 1500px; /* Largeur PLUS PETITE pour la page d'accueil */
+    padding-left: 20%;
 }
+
+/* --- Style SPÉCIFIQUE pour la page des actualités (blog.html) --- */
+#page-blog .contenant-actualite {
+    max-width: 1800px; 
+    padding-left: 10%;
+}
+
+.contenant-actualite {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+.contenant-actualité-bloc {
+    background-color: #469B61;
+    border-radius: 5px;
+    color: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
+}
+
+/* -- 1. MISE EN PAGE DÉCONNECTÉ (`.logged-out`) -- */
+.contenant-actualité-bloc.logged-out {
+    align-items: center;
+    text-align: center;
+}
+.contenant-actualité-bloc.logged-out .contenant-titre {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.contenant-actualité-bloc.logged-out .contenant-date {
+    margin: 0.5rem 0; /* Espace la date */
+    opacity: 0.8;
+}
+/* -- 2. MISE EN PAGE CONNECTÉ (`.logged-in`) -- */
+.contenant-actualité-bloc.logged-in {
+    align-items: flex-start;
+    text-align: left;
+}
+.contenant-actualité-bloc.logged-in .contenant-titre {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.contenant-actualité-bloc.logged-in .contenant-description {
+    margin: 1rem 0;
+    text-align:center;
+    flex-grow: 1; /* Pousse la barre du bas vers le bas */
+}
+.contenant-actualité-bloc.logged-in .contenant-boutton-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 101%;
+    padding-top: 4.5%;
+    height: 110px;
+}
+
+.contenant-actualité-bloc.logged-in .contenant-boutton {
+    display: flex;
+    gap: 1rem;
+    height:50px;
+}
+
+/* Style de BASE pour tous les boutons de ce type */
+
+#page-modifier .boutton-maj {
+    border-radius:30px;
+    width: 180px;
+    margin-right: 10%;
+    font-weight:400;
+}
+#page-modifier .boutton-rouge-supprimer {
+    border-radius:30px;
+    width: 180px;
+    color:white;
+    font-weight:400;
+}
+.form-actions {
+    display: flex;
+    justify-content: center; 
+    gap: 1rem;               /* Crée un espace de 1rem entre les boutons */
+    margin-top: 2rem;       /* Crée un espace au-dessus des boutons */
+    height: 50px;
+}
+/* Style commun pour les boutons Modifier et Supprimer */
+.boutton-orange,
+.boutton-rouge {
+    /* --- 1. On définit la taille du CADRE --- */
+      /* Largeur minimale pour le bouton */
+    height: 60%;
+    width: 80%;      
+    padding: 0 1rem;  
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    font-size: 1.2rem; 
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative; 
+    top: 32px;          
+}
+.boutton-rouge-supprimer {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 10.1px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.boutton-orange:hover,
+.boutton-rouge:hover {
+    transform: scale(1.05); /* Petit effet de grossissement au survol */
+}
+
+/* Couleurs spécifiques */
+.boutton-orange {
+    background-color: orange; /* Orange */
+}
+
+.boutton-rouge, .boutton-rouge-supprimer  {
+    background-color: red; /* Rouge */
+}
+
+/*
 .boutton-orange {
     color:white;
-    background-color:orange;
     font-size: clamp(0.9rem, 1.5vw, 1.6rem);
+    background-color:orange;
     font-weight: 700;
     border:none;
     border-radius: 5px;
     height: 70%;
-    width: 30%;
+    width: 80%;
 }
 
 .boutton-rouge {
@@ -710,7 +849,7 @@ footer {
     border:none;
     border-radius: 5px;
     height: 70%;
-    width: 35%;
+    width: 50%;
 }
 
 /* CONNEXION */
@@ -747,7 +886,7 @@ footer {
     font-weight: 500;
     font-size: clamp(2rem, 2vh, 8rem);
 }
-#page-login, #auth-links, .login-boutton {
+#page-login .login-boutton .boutton-maj {
     background-color: #C8FF00;
     color: black;
     padding: 1.3rem 5.1rem;
@@ -756,6 +895,7 @@ footer {
     font-weight: 600;
     font-size: 1.2rem;
 }
+
 /* ARTICLES */
 
 a.article-link {

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body>
+<body id="page-modifier">
 
     <header><!-- ACCUEIL -->
         <div id="Accueil" class="logo">Agenc<em>eco</em></div>
@@ -35,9 +35,27 @@
 
 
     
-    <main>
-
+     <main> 
+        <h2 class="section-titre-vert">Modifier l'actualité</h2>
+        <div class="form-container">
+            <form id="edit-form">
+                <div class="form-group">
+                    <input type="text" id="news-title" placeholder="Le titre de mon actualité" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="news-description" placeholder="Sa description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea id="news-content" placeholder="Son contenu" rows="4" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="boutton-maj">Mettre à jour</button>
+                    <button type="submit" id="delete-button" class="boutton-rouge-supprimer">Supprimer</button>
+                </div>
+            </form>
+        </div>
     </main>
+
 
 
 
