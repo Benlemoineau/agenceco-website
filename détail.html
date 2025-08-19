@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body id="page-ajout">
+<body id="page-détail">
 
     <header><!-- ACCUEIL -->
         <div id="Accueil" class="logo">Agenc<em>eco</em></div>
@@ -35,29 +35,19 @@
 
 
     
-    
-    <main> 
-        <h2 class="section-titre-vert">Ajouter une actualité</h2>
-        <div class="form-container">
-            <form id="add-news-form">
-                <div class="form-group">
-                    <input type="text" id="news-title" placeholder="Le titre de mon actualité" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="news-description" placeholder="Sa description" rows="4" required></textarea>
-                </div>
-                <div class="form-group">
-                    <textarea id="news-content" placeholder="Son contenu" rows="4" required></textarea>
-                </div>
-                <div class="form-group">
-                    <textarea id="news-date" placeholder="sa date" rows="1" required></textarea>
-                </div>
-                <div class="boutton-conteneur">
-                    <button type="submit" class="login-boutton">Sauvegarder</button>
-                </div>
-            </form>
+     <main> 
+        <h2 class="section-titre-vert">Détail de l'actualité</h2>
+           <div id="article-detail-container">
+            <p>Chargement de l'article...</p>
+        </div>
+
+        <div class="back-button-container">
+            <a href="blog.html" class="boutton-retour-actu">Retour aux actualités</a>
         </div>
     </main>
+
+
+
 
 
     <footer>
@@ -91,6 +81,8 @@
         </div>
         <div class="footer-contenudubas"> <!-- PIED-DE-PAGE -->
             <p>Copyright © 2021 AGENCECO - All rights reserved</p>
+             <div id="auth-links">
+            </div>
             <div class="footer-reseauxsociaux">
                 <div class="footer-iconereseau">
                     <img  src="assets/efff690da60c32c1327fec79504ddfb7e61735a9.png" alt="icone de facebook">

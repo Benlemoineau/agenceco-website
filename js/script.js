@@ -153,8 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
        
         
-// La version corrigée et propre :
-// Dans votre script.js
+
 function createArticleHtml(article, pageType) {
     let articleInnerHtml = '';
 
@@ -163,8 +162,10 @@ function createArticleHtml(article, pageType) {
         // On crée la structure simple et centrée
         articleInnerHtml = `
             <div class="contenant-titre"><p>${article.title}</p></div>
-            <div class="contenant-date"><p>Publié le ${new Date(article.createdAt).toLocaleDateString('fr-FR')}</p></div>
-            <div class="contenant-description"><p>${article.content}</p></div>
+            <div class="contenant-date"><p>Publié le ${new Date(article.publicationDate).toLocaleDateString('fr-FR')}</p></div>
+            <div class="contenant-description"><p>${article.description}</p></div>
+            <div class="contenant-content"><p>${article.content}</p></div>
+
         `;
 
     // B. Si l'utilisateur est CONNECTÉ
@@ -178,9 +179,10 @@ function createArticleHtml(article, pageType) {
         `;
         articleInnerHtml = `
             <div class="contenant-titre"><p>${article.title}</p></div>
-            <div class="contenant-description"><p>${article.content}</p></div>
+            <div class="contenant-description"><p>${article.description}</p></div>
+            <div class="contenant-content"><p>${article.content}</p></div>
             <div class="contenant-boutton-date">
-                <div class="contenant-date"><p>Publié le ${new Date(article.createdAt).toLocaleDateString('fr-FR')}</p></div>
+                <div class="contenant-date"><p>Publié le ${new Date(article.publicationDate).toLocaleDateString('fr-FR')}</p></div>
                 ${adminButtonsHtml}
             </div>
         `;
@@ -195,7 +197,7 @@ function createArticleHtml(article, pageType) {
         return `<a href="blog.html" class="article-link">${finalArticleHtml}</a>`;
     } else {
         // On la retourne directement pour le blog
-        return finalArticleHtml;
+         return `<a href="détail.html?id=${article.id}" class="article-link">${finalArticleHtml}</a>`;
     }
 }
 
@@ -271,7 +273,9 @@ if (editForm) {
                 // CORRIGÉ : On remplit les bons champs du formulaire
                 document.getElementById('news-title').value = article.title;
                 document.getElementById('news-description').value = article.description;
-                document.getElementById('news-content').value = article.imageUrl; // Assurez-vous que votre HTML a bien un input avec id="news-image"
+                document.getElementById('news-content').value = article.content;
+                document.getElementById('news-date').value = article.publicationDate;
+
 
             } catch (error) {
                 console.error("ERREUR lors de la récupération :", error);
@@ -286,11 +290,11 @@ if (editForm) {
         // Gérer la soumission du formulaire pour la MISE À JOUR
         editForm.addEventListener('submit', async (event) => {
             event.preventDefault();
-            // CORRIGÉ : On lit les données depuis les bons champs
             const updatedData = {
                 title: document.getElementById('news-title').value,
-                content: document.getElementById('news-description').value,
-                imageUrl: document.getElementById('news-content').value,
+                description: document.getElementById('news-description').value,
+                content: document.getElementById('news-content').value,
+                publicationDate: document.getElementById('news-date').value,
             };
             try {
                 const response = await fetch(`${API_BASE_URL}/articles/${articleId}`, {
@@ -349,8 +353,6 @@ if (editForm) {
                 title: document.getElementById('news-title').value,
                 content: document.getElementById('news-description').value,
                 imageUrl: document.getElementById('news-content').value,
-                // Votre API peut nécessiter d'autres champs comme un 'userId'
-                // Exemple : userId: 1 
             };
 
             try {
@@ -376,6 +378,52 @@ if (editForm) {
                 alert(error.message);
             }
         });
+    }
+
+
+    // --- LOGIQUE POUR LA PAGE DE DÉTAIL D'ARTICLE (detail.html) ---
+    const detailContainer = document.getElementById('article-detail-container');
+    if (detailContainer) {
+        
+        // On récupère l'ID de l'article depuis l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleId = urlParams.get('id');
+
+        // Si pas d'ID, on affiche une erreur
+        if (!articleId) {
+            detailContainer.innerHTML = "<p>Erreur : Aucun article spécifié.</p>";
+        } else {
+            // Fonction pour récupérer et afficher l'article
+            const fetchSingleArticle = async () => {
+                try {
+                    const response = await fetch(`${API_BASE_URL}/articles/${articleId}`);
+                    if (!response.ok) {
+                        throw new Error("L'article demandé n'a pas pu être chargé.");
+                    }
+                    const article = await response.json();
+
+                    // On crée le HTML pour l'article détaillé
+                    const articleHtml = `
+                        <h1 class="article-detail-title">${article.title}</h1>
+                        <p class="article-detail-description">${article.description || ''}</p>
+                        <div class="article-detail-content">
+                            <div>${article.content}</div>
+                        </div>
+                        <div class="article-detail-meta">
+                            <p>Publié le ${new Date(article.publicationDate).toLocaleDateString('fr-FR')}</p>
+                            <p>Auteur: BenjaminElPajaro</p>
+                        </div>
+                    `;
+
+                    detailContainer.innerHTML = articleHtml;
+
+                } catch (error) {
+                    detailContainer.innerHTML = `<p class="error-message">${error.message}</p>`;
+                }
+            };
+
+            fetchSingleArticle();
+        }
     }
 
 });
