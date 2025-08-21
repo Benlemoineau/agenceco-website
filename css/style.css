@@ -14,9 +14,8 @@ body {
 
 /* -- STYLES DE BASES SOUS TITRES & TITRES -- */
 .section-titre-vert {
-    padding-top: 3%;
     color: #469B61;
-    font-size: clamp(2rem, 3.2vw, 5.2rem); 
+    font-size: clamp(1.5rem, 3.2vw, 5.2rem); 
     font-weight: 600;
     text-align: center;
     margin-bottom: 1rem;
@@ -50,8 +49,7 @@ body {
 }
 
 main > section {
-   /* padding: 4rem 21.8%;*/
-    padding-bottom: 12%;
+   padding: 0.6rem 21.8%;
 }
 
 
@@ -525,6 +523,7 @@ footer {
     flex-wrap: wrap;
     gap: 2rem;
     border-bottom: 1px solid  black;
+    margin-top: 5%;
 }
 
 .footer-column h2 {
@@ -649,18 +648,19 @@ footer {
     display: flex;
     flex-direction: column;
     align-items:center;
-    height:130px;
+    margin-bottom: 7%;
+   /* height:130px;*/
 }
 
 .boutton-actualité-forme {
     border:none;
     background-color:#C8FF00;
-    padding-top: 0.8%;
     color:black;
-    font-size: clamp(1.1rem, 1.7vw, 2rem);
+    /*padding: 1% 1% 3% 1%;*/
+    font-size: clamp(0.7rem, 1.7vw, 3rem);
     font-weight: 500;
     width: 20%;
-    height: 70px;
+    height: 60%;
     cursor:pointer;
     transition: transform 0.2s ease-in-out;
     border-radius:10px;
@@ -674,39 +674,43 @@ footer {
 /* ============================================== */
 /* --- Style SPÉCIFIQUE pour la page d'accueil (index.html) --- */
 #page-accueil .contenant-actualite {
-    max-width: 1500px; /* Largeur PLUS PETITE pour la page d'accueil */
-    padding-left: 20%;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: clamp(1rem, 2.7vh, 5rem);
 }
 
 /* --- Style SPÉCIFIQUE pour la page des actualités (blog.html) --- */
 #page-blog .contenant-actualite {
-    max-width: 1800px; 
+    padding-right: 10%;
     padding-left: 10%;
 }
-
-.contenant-actualite {
-    display: grid;
-    grid-template-columns: 1fr;
-    
+#page-blog .contenant-actualité-bloc {
+    margin-right: 0%;
+    margin-left: 0%;
 }
+
+
 .contenant-actualité-bloc {
     background-color: #469B61;
     border-radius: 5px;
     color: white;
-    padding: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     min-height: 220px;
+    margin-right: -40%;
+    margin-left: -40%;
+    font-size: 2rem;
 }
 
 /* -- 1. MISE EN PAGE DÉCONNECTÉ (`.logged-out`) -- */
 .contenant-actualité-bloc.logged-out {
     align-items: center;
     text-align: center;
+    justify-content: space-between;
 }
+
 .contenant-actualité-bloc.logged-out .contenant-titre {
-    font-size: 1.5rem;
     font-weight: 600;
 }
 .contenant-actualité-bloc.logged-out .contenant-date {
@@ -716,11 +720,12 @@ footer {
 /* -- 2. MISE EN PAGE CONNECTÉ (`.logged-in`) -- */
 
 .contenant-actualité-bloc.logged-in .contenant-titre {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.2vh, 3rem);
     font-weight: 600;
     text-align:left;
 }
 .contenant-actualité-bloc.logged-in .contenant-description {
+    font-size: clamp(1.5rem, 1.2vh, 3rem);
     margin: 1rem 0;
     text-align:center;
     flex-grow: 1; 
@@ -737,15 +742,16 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 101%;
+    width: 100%;
     padding-top: 4.5%;
-    height: 110px;
+    padding-right: 2%;
 }
 
 .contenant-actualité-bloc.logged-in .contenant-boutton {
     display: flex;
-    gap: 1rem;
+    margin-top: 0.5%;
     height:50px;
+    gap:4%;
 }
 
 /* Style de BASE pour tous les boutons de ce type */
@@ -782,13 +788,12 @@ footer {
     align-items: center;     
     font-size: 1.2rem; 
     border: none;
-    border-radius: 7px;
+    border-radius: 4px;
     color: white;
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s ease;
-    position: relative; 
-    top: 32px;          
+        
 }
 .boutton-rouge-supprimer {
     padding: 0.4rem 0.8rem;
@@ -924,7 +929,9 @@ a.article-link {
 /* MEDIA-QUERIES */
 
 @media (max-width: 1840px) {
-    
+      .contenant-actualité-bloc.logged-in .contenant-boutton-date {
+    padding-right: 3%;
+}
     nav {
         gap: 50px;
     }
@@ -935,7 +942,37 @@ a.article-link {
     } 
 }
 
+
+@media (max-width: 1700px) {
+    .contenant-actualité-bloc.logged-in .contenant-boutton-date {
+    padding-right: 3%;
+    }
+
+    .menu-barre {
+        gap: 2rem;
+    }
+}
+
+@media (max-width : 1630px) {
+    .contenant-actualité-bloc.logged-in .contenant-boutton-date {
+    padding-right: 4%;
+    }
+    .menu-barre a {
+        font-size: 1.1rem;
+    }
+    
+}
+
 @media (max-width: 1400px) {
+    .galerie-fleche, a {
+    padding-left: 2%;
+
+}
+    .contenant-actualité-bloc.logged-in .contenant-boutton-date {
+    padding-right: 3%;
+    }
+
+
     .menu-barre {
         gap: 1.5rem;
     }
@@ -945,26 +982,17 @@ a.article-link {
     .logo {
         font-size: 2.2rem;
     }
-    .boutton-actualité-forme {
-        padding-top: 1.7%;
-    }
+    
   
 }
-@media (max-width: 1700px) {
-
-    .menu-barre {
-        gap: 2rem;
-    }
-}
-
-@media (max-width : 1630px) {
-    .menu-barre a {
-        font-size: 1.1rem;
-    }
-    
-}
-
 @media (max-width : 1110px) {
+    .galerie-fleche, a {
+    padding-left: 2.5%;
+
+}
+    .contenant-actualité-bloc.logged-in .contenant-boutton-date {
+    padding-right: 4%;
+    }
     .overlay {
         height: 70vh;
     }
@@ -979,6 +1007,9 @@ a.article-link {
 }
 
 @media (max-width: 1024px) {
+    .contenant-actualité-bloc.logged-in .contenant-boutton-date {
+    padding-right: 3%;
+    }
 
     .overlay-titre-img h1 {
         top:40.7%;
@@ -1026,10 +1057,6 @@ a.article-link {
         align-items: center;
         text-align: center;
         padding-bottom: 2rem;
-    }
-
-    main > section {
-        padding: 15.2rem 5%;
     }
 
     .menu-burger {
@@ -1093,20 +1120,24 @@ a.article-link {
     }
     .boutton-actualité-forme {
         text-align: center;
-        width: 80%;
-        height: 45px;
-        padding-top: 1%;
+        width: 22%;
+        height: 32%;
+        
     }
 
-    .contenant-actualité-bloc {
-        width: 80%;
-    }
     .boutton-orange, .boutton-rouge {
         width: 50%;
     }
 }
     
 @media (max-width: 800px) {
+        .galerie-fleche, a {
+    padding-left: 3.5%;
+
+}
+    .contenant-actualité-bloc.logged-in .contenant-boutton-date {
+    padding-right: 5%;
+    }
        .overlay {
         height: 50vh;
     }
@@ -1119,8 +1150,17 @@ a.article-link {
 }
 
 @media (max-width: 570px) {
+        .galerie-fleche, a {
+    padding-left: 4.5%;
 
-
+}
+.contenant-actualité-bloc.logged-in .contenant-boutton-date {
+    height: 110px;
+    margin-left: 6%;
+}
+.contenant-actualité-bloc .contenant-boutton-date {
+        justify-content: center;
+    }
     .contenant-date {
         display: none;
     }
@@ -1133,7 +1173,7 @@ a.article-link {
 
     .contenant-actualité-bloc {
         display: flex;
-        text-align: center;
+        align-items: center;
         flex-direction:column;
         flex-wrap: wrap;
     }
@@ -1142,15 +1182,22 @@ a.article-link {
     }
 
     .boutton-orange {
+        position: relative;
+        left:-8%;
         font-size:1rem;
         width:55%;
-        padding-top:1.6%;
+        height: 50%;
+        padding-top:1%;
+        top: 32px;
     }
     .boutton-rouge {
+        position: relative;
+        right: 8%;
         font-size:1rem;
         width:55%;
-        padding-top:12%;
-        padding-top:1.6%;
+        height: 50%;
+        padding-top:1%;
+        top: 32px;
     }
 
     .apropos-contenu-contenant {
@@ -1164,7 +1211,10 @@ a.article-link {
 }
 
 @media (max-width: 520px) {
-        
+               .galerie-fleche, a {
+    padding-left: 5.5%;
+
+}
         .overlay h1 {
             padding-right: 9%;
             padding-bottom: 22.8%;
@@ -1183,9 +1233,20 @@ a.article-link {
         font-size: 1.2rem;
     }
 
+#page-blog .contenant-actualite {
+    padding-right: 10%;
+    padding-left: 10%;
+
+
+}
+
 }
 
 @media (max-width: 370px) {
+           .galerie-fleche, a {
+    padding-left: 7.5%;
+
+}
      .apropos-contenu-contenant {
         padding: 1.5rem 1rem; 
     }
@@ -1193,26 +1254,53 @@ a.article-link {
         padding: 1.5rem 1rem;
     }
 }
+@media (max-width: 320px) {
+    .contenant-actualité-bloc{
+        padding-right: 32%;
+        padding-left: 2%;
+    }
 
+    .boutton-orange {
+        position: relative;
+        left: -18%;
+       
+    }
+     .boutton-actualité {
+        height:50px;
+    }
+        .boutton-actualité-forme {
+        font-size: 1.2rem;
+        width: 80%;
+        height: 72%;
+        }
+    .boutton-rouge {
+        position: relative;
+        right: 9.5%;
+    }
+
+}
+   
 
 /* TEST DETAIL HTML */
 /* Conteneur principal de la page de détail */
 #article-detail-container {
     max-width: 900px;
-    margin: 10rem auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 31%;
     padding: 2rem;
 }
 
 .article-detail-title {
-    font-size: 2.5rem;
+    
     font-weight: 600;
     text-align: center;
-    color: #469B61;
+    color: black;
     margin-bottom: 1.5rem;
 }
 
 .article-detail-description {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align:center;
     color: black;
     line-height: 1.6;
@@ -1220,7 +1308,7 @@ a.article-link {
 }
 
 .article-detail-content {
-    margin-bottom: 2rem;
+    margin-bottom: 1.3rem;
     text-align:center;
     color:black;
     font-size:0.8rem;
@@ -1244,12 +1332,10 @@ a.article-link {
     display: inline-block;
     border:none;
     background-color:#C8FF00;
-    padding-top: 1.3%;
     color:black;
-    font-size: clamp(0.9rem, 1.5vw, 1.4rem);
+    font-size: clamp(0.7rem, 1.7vw, 2rem);
     font-weight: 500;
-    width: 24.5%;
-    height: 70px;
+    width: 20%;
     cursor:pointer;
     transition: transform 0.2s ease-in-out;
     border-radius:10px;
