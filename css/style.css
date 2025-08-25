@@ -394,7 +394,7 @@ nav {
 .apropos-image-contenant img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /
+    object-fit: cover; 
 }
 
 
@@ -495,7 +495,7 @@ nav {
     height: 45px;
     border-radius: 50%;
     border: 1px solid #000;
-    background-color: var(--bg-light);
+    background-color: white;
     font-size: 1.5rem;
     user-select: none;
     transition: 0.6s ease;
@@ -511,7 +511,7 @@ nav {
     height: 45px;
     border-radius: 50%;
     border: 1px solid #000;
-    background-color: var(--bg-light);
+    background-color: white;
     font-size: 1.5rem;
     color:#255919;
     user-select: none;
@@ -811,15 +811,14 @@ footer {
 .boutton-rouge, .boutton-rouge-supprimer  {
     background-color: red; 
 }
-/* Style pour le bouton "Sauvegarder" */
+
 .form-container .boutton-conteneur {
     text-align: center;
     margin-top: 1rem;
 }
 
 .form-container .login-boutton {
-    background-color: #C8FF00; /* Jaune-vert */
-    color: black;
+    background-color: #C8FF00; 
     font-size:1.2rem;
     font-weight: 600;
 }
@@ -904,7 +903,7 @@ a.article-link {
     margin-bottom: 1.5rem;
 }
 
-.form-container input[type="text"],
+.form-container input,
 .form-container textarea {
     width: 100%;
     padding: 0.3rem;
@@ -934,6 +933,7 @@ a.article-link {
     margin-right: auto;
     margin-bottom: 31%;
     padding: 2rem;
+    background-color:#469B61;
 }
 
 .article-detail-title {
@@ -1119,6 +1119,26 @@ a.article-link {
 /* MEDIA 1024PX */
 @media (max-width: 1024px) {
 
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: background-color 0.3s ease-in-out; 
+    }
+
+    header.scrolled {
+        background-color: rgba(244, 246, 245, 0.9); 
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+    }
+
+    
+    main {
+        padding-top: 80px; 
+    }
+
+
+
     .contenant-actualité-bloc.logged-in .contenant-boutton-date {
         padding-right: 3%;
     }
@@ -1163,7 +1183,7 @@ a.article-link {
 
     #menu-barre.is-open {
         max-height: 350px;
-        opacity: 1;
+        opacity: 0.2;
     }
 
     .menu-barre {
@@ -1399,6 +1419,10 @@ a.article-link {
 
     .apropos-image-contenant {
         padding: 1.5rem 1rem;
+    }
+
+    .apropos-image-contenant img {
+        display: none;
     }
 }
 
