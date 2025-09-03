@@ -2,7 +2,7 @@
 // == 1. CONFIGURATION ET FONCTIONS PARTAGÉES
 // ===================================================================
 
-const API_BASE_URL = 'http://localhost:3000'; 
+const API_BASE_URL = 'https://backend-teal-alpha-44.vercel.app'; 
 
 // Fonctions utilitaires pour gérer l'authentification
 const getToken = () => localStorage.getItem('jwtToken');
